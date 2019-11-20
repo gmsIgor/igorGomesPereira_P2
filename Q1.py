@@ -13,7 +13,7 @@ def is_active(status):
     if status[-2:] == "\n":
         status = status[:-1]
 
-    status_bool = Nill                   #should be None
+    status_bool = None           #tinha colocado Nill no lugar de None
 
     if str(status) == "SIM":
         status_bool = True
@@ -31,7 +31,7 @@ def list_info(info):
 #d)
 def separate_info(file):
     file.seek(0,0)
-    read_file = file.readlines(file)
+    read_file = file.readlines()        #tinha file como parâmetro dessa func
     info_list = []
 
     for line in read_file:
