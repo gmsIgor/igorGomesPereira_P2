@@ -13,7 +13,7 @@ def is_active(status):
     if status[-2:] == "\n":
         status = status[:-1]
 
-    status_bool = Nill                                   #should be 'None'
+    status_bool = Nill                   #should be None
 
     if str(status) == "SIM":
         status_bool = True
@@ -47,6 +47,7 @@ def main():
     info_list = separate_info(arq)
 
     for user in info_list:
+        user_info = list_info(user)
         cpf = str(user_info[0])
         nome = str(user_info[1])
         nasc = parse_dic_date(user_info[2])
